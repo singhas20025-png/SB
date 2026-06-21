@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sherin ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#ffd1ff);
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.page{
+    display:none;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    animation:fadeIn .6s ease;
+}
+
+.page.active{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    color:#ff4d88;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:35px;
+}
+
+.question{
+    margin-bottom:30px;
+}
+
+.question h3{
+    margin-bottom:15px;
+    color:#333;
+}
+
+.option{
+    background:#ffe6ee;
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    transform:translateX(5px);
+    background:#ffd0df;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:35px;
+}
+
+button{
+    border:none;
+    background:#ff4d88;
+    color:white;
+    padding:14px 28px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.letter{
+    max-height:65vh;
+    overflow-y:auto;
+    line-height:1.9;
+    color:#444;
+    padding-right:10px;
+}
+
+.letter p{
+    margin-bottom:18px;
+}
+
+.highlight{
+    color:#ff4d88;
+    font-weight:700;
+}
+
+.final-question{
+    margin-top:30px;
+    background:#fff0f5;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.final-question h2{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.heart{
+    position:fixed;
+    color:#ff4d88;
+    animation:float 6s linear infinite;
+    opacity:.6;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+.end{
+    text-align:center;
+}
+
+.end h1{
+    font-size:3rem;
+}
+
+.end p{
+    margin:20px 0;
+    color:#555;
+    font-size:18px;
+}
+
+.big-heart{
+    font-size:90px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.1);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- PAGE 1 -->
+    <div class="page active" id="page1">
+        <h1>Welcome Sherin ❤️</h1>
+        <p class="subtitle">A tiny adventure made specially for you ✨</p>
+
+        <div class="question">
+            <h3>Question #1 😎</h3>
+            <div class="option">Yes, I'm ready for this adventure!</div>
+            <div class="option">Absolutely ready!</div>
+            <div class="option">I was born ready 😂</div>
+        </div>
+
+        <div class="question">
+            <h3>Question #2 🤔</h3>
+            <div class="option">Ashu is a little funny 😅</div>
+            <div class="option">Ashu is quite funny 😂</div>
+            <div class="option">Ashu should get a comedy award 🤣</div>
+        </div>
+
+        <div class="nav">
+            <div></div>
+            <button onclick="nextPage(2)">Next ❤️</button>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+        <h1>Scientific Survey 🔬❤️</h1>
+        <p class="subtitle">Please answer honestly. Science depends on it.</p>
+
+        <div class="question">
+            <h3>If someone saves you the last slice of pizza 🍕?</h3>
+            <div class="option">10 points</div>
+            <div class="option">100 points</div>
+            <div class="option">Marriage material 😂</div>
+        </div>
+
+        <div class="question">
+            <h3>Choose a superpower 🦸‍♀️</h3>
+            <div class="option">Flying ✈️</div>
+            <div class="option">Reading minds 🧠</div>
+            <div class="option">Understanding Ashu's weird jokes 😭</div>
+        </div>
+
+        <div class="question">
+            <h3>Most dangerous thing in Teleperformance?</h3>
+            <div class="option">Work 😭</div>
+            <div class="option">Monday mornings 😴</div>
+            <div class="option">Ashu staring at Sherin accidentally 😂</div>
+        </div>
+
+        <div class="nav">
+            <button onclick="prevPage(1)">⬅ Back</button>
+            <button onclick="nextPage(3)">Next ❤️</button>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+        <h1>A Letter For Sherin ❤️</h1>
+
+        <div class="letter">
+
+            <p>Hey Sherin ❤️,</p>
+
+            <p>
+            I still remember the <span class="highlight">21st of May</span> —
+            the very first day I saw you.
+            </p>
+
+            <p>
+            At that time, I wasn't doing well. I felt unhappy, unmotivated,
+            and honestly didn't even want to come to Teleperformance.
+            Somehow, I still showed up that day.
+            Looking back now, maybe I was meant to.
+            </p>
+
+            <p>
+            I remember the first moment you crossed my path.
+            I turned around and looked at you without even realizing why.
+            I remember hearing your voice for the first time —
+            it instantly caught my attention.
+            </p>
+
+            <p>
+            I remember watching you laugh and talk with Soniya,
+            and without knowing it,
+            I found myself admiring you from a distance.
+            </p>
+
+            <p>
+            That was the first time I actually wanted to stay at Teleperformance.
+            </p>
+
+            <p>
+            Then after our last conversation in the pantry area.
+            Since that moment, something has felt different.
+            Maybe I'm overthinking it.
+            Maybe I'm imagining things.
+            But something inside you changed,
+            and I couldn't ignore it.
+            </p>
+
+            <p>
+            Sherin, one thing about me is that when I care about someone,
+            I care deeply.
+            I know how to stay.
+            I know how to support someone through good days and difficult ones.
+            </p>
+
+            <p>
+            You once asked me what the foundation between us could be.
+            The truth is, I already know my answer.
+            </p>
+
+            <p>
+            I want to spend time with you —
+            not just days, but months and years.
+            I want to become a better version of myself,
+            and somehow I feel that whenever you're around,
+            I become closer to that person.
+            </p>
+
+            <p>
+            I want to work hard, achieve things, which i lost in few months.
+            and one day look into your eyes and see pride there.
+            </p>
+
+            <p>
+            So this is me, Sherin.
+            No games. No masks. No pretending.
+            Just an open book sharing what is in my heart.
+            </p>
+
+            <p>
+            Lately, I've felt like you've been a little distant.
+            Maybe I'm wrong.
+            Maybe you're busy.
+            But even then, I've been waiting for a chance to talk to you,
+            because you matter to me more than you probably realize.
+            </p>
+
+            <div class="final-question">
+                <h2>One Last Question ❤️</h2>
+
+                <p>
+                I don't know what the future holds.
+                I don't know whether I'll achieve everything I dream of.
+                But one thing I know for sure is that having you in my life
+                would make every step of that journey more meaningful.
+                </p>
+
+                <br>
+
+                <p>
+                I'm a little stupid sometimes.
+                I overthink.
+                I make bad jokes.
+                But I promise I'll always be genuine.
+                </p>
+
+                <br>
+
+                <h2>
+                Sherin Bhui ❤️<br><br>
+                Would you like to go on a date with me
+                and see where this story takes us? And im also aware of the fact that you
+                dont do any summer fings. Neither i do. So Sherin Bhui, i know i irritates you
+                sometimes but also make youlaugh all the time. And charming to mai hui hi. 
+                So would you like to be my Sweet little girlfriend cum partner for life?
+                🌹
+                </h2>
+
+                <br>
+
+                <p>
+                No matter what your answer is,
+                thank you for reading this.
+                You are genuinely special to me.
+                ❤️
+                </p>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <button onclick="prevPage(2)">⬅ Back</button>
+            <button onclick="nextPage(4)">Final Page ❤️</button>
+        </div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page4">
+        <div class="end">
+
+            <div class="big-heart">❤️</div>
+
+            <h1>Thank You, Sherin ❤️</h1>
+
+            <p>
+                If you've reached this page,
+                thank you for spending a few minutes on this little adventure.
+            </p>
+
+            <p>
+                This website was made specially for <b>SHERIN</b>.
+            </p>
+
+            <p>
+                Whatever happens next,
+                I hope I managed to make you smile today. ✨
+            </p>
+
+            <h2 style="color:#ff4d88;margin-top:20px;">
+                — Ashu ❤️
+            </h2>
+
+            <div class="nav" style="justify-content:center;margin-top:40px;">
+                <button onclick="prevPage(3)">❤️ Read Again</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+function nextPage(page){
+    document.querySelectorAll('.page').forEach(p=>{
+        p.classList.remove('active');
+    });
+    document.getElementById('page'+page).classList.add('active');
+    window.scrollTo(0,0);
+}
+
+function prevPage(page){
+    document.querySelectorAll('.page').forEach(p=>{
+        p.classList.remove('active');
+    });
+    document.getElementById('page'+page).classList.add('active');
+    window.scrollTo(0,0);
+}
+
+function createHeart(){
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='❤️';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*25+15)+'px';
+    heart.style.animationDuration=(Math.random()*4+4)+'s';
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },7000);
+}
+
+setInterval(createHeart,400);
+</script>
+
+</body>
+</html>
